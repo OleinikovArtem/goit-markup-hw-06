@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container desktop-header">
         <nav class="header__nav">
           <a class="logo" href="./index.html">Web<span class="logo-text">Studio</span></a>
           <ul class="header__list">
@@ -45,9 +45,73 @@
           </ul>
         </address>
       </div>
+      <div class="container mobile-header">
+        <a class="logo" href="./index.html">Web<span class="logo-text">Studio</span></a>
+        <button class="burger" type="menu">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <button class="close-button" type="button">
+          <svg width="8" height="8" class="close-button-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item"><a class="mobile-nav__link active" href="./index.html">Studio</a></li>
+          <li class="mobile-nav__item"><a class="mobile-nav__link" href="./index.html">Portfolio</a></li>
+          <li class="mobile-nav__item"><a class="mobile-nav__link" href="./index.html">Contacts</a></li>
+        </ul>
+
+        <address class="mobile-nav__address">
+          <ul class="mobile-nav__address-list">
+            <li>
+              <a class="mobile-nav__address-link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+            <li><a class="mobile-nav__address-link" href="tel:+110001111111"> +11 (000) 111-11-11</a></li>
+          </ul>
+        </address>
+
+        <ul class="social">
+          <li class="social__item">
+            <a class="icon" href="">
+              <svg width="24" height="24" class="footer__social">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="icon" href="">
+              <svg width="24" height="24" class="footer__social">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="icon" href="">
+              <svg width="24" height="24" class="footer__social">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="icon" href="">
+              <svg width="24" height="24" class="footer__social">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
+    <main hidden>
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">
@@ -354,7 +418,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer hidden class="footer">
       <div class="container">
         <div class="col">
           <a class="logo" href="./index.html">Web<span class="logo-text">Studio</span></a>
@@ -410,7 +474,7 @@
       </div>
     </footer>
 
-    <div class="modal-overlay is-open">
+    <div hidden class="modal-overlay is-open">
       <div class="modal">
         <button class="close-button" type="button">
           <svg width="8" height="8" class="close-button-icon">
