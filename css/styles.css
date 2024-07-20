@@ -45,11 +45,6 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-h1 {
-  font-size: 56px;
-  line-height: 1.07;
-}
-
 h2 {
   font-size: 36px;
   line-height: 1.11;
@@ -333,7 +328,7 @@ img {
 .hero {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
   text-align: center;
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero.jpg');
   color: var(--white-color);
@@ -344,8 +339,11 @@ img {
 }
 
 .hero__title {
-  margin: 0 auto 48px;
-  max-width: 496px;
+  margin: 0 auto 72px;
+  max-width: 100%;
+  font-size: 36px;
+  line-height: 40px;
+  width: 216px;
 }
 
 .goals__list {
@@ -778,6 +776,18 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   .mobile-header {
     display: none;
   }
+
+  .hero {
+    padding: 112px 0;
+  }
+
+  .hero__title {
+    width: 496px;
+    font-size: 56px;
+    line-height: 60px;
+    padding: 0;
+    margin: 0 auto 48px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1158px) {
@@ -799,5 +809,10 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   .container {
     width: 1158px;
     margin: 0 auto;
+  }
+
+  .hero {
+    max-width: 1440px;
+    padding: 188px 0;
   }
 }
