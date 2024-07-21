@@ -47,7 +47,7 @@
       </div>
       <div class="container mobile-header">
         <a class="logo" href="./index.html">Web<span class="logo-text">Studio</span></a>
-        <button class="burger" type="menu">
+        <button class="burger" type="menu" onclick="document.querySelector('.mobile-nav').classList.add('is-open')">
           <svg width="24" height="24">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -55,7 +55,11 @@
       </div>
 
       <nav class="mobile-nav">
-        <button class="close-button" type="button">
+        <button
+          class="close-button"
+          type="button"
+          onclick="document.querySelector('.mobile-nav').classList.remove('is-open')"
+        >
           <svg width="8" height="8" class="close-button-icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -117,7 +121,11 @@
           <h1 class="hero__title">
             Effective Solutions for Your Business
           </h1>
-          <button class="button primary-button" type="button">
+          <button
+            class="button primary-button"
+            type="button"
+            onclick="document.querySelector('.modal-overlay').classList.add('is-open')"
+          >
             Order Service
           </button>
         </div>
@@ -474,9 +482,13 @@
       </div>
     </footer>
 
-    <div hidden class="modal-overlay is-open">
+    <div class="modal-overlay">
       <div class="modal">
-        <button class="close-button" type="button">
+        <button
+          class="close-button"
+          type="button"
+          onclick="document.querySelector('.modal-overlay').classList.remove('is-open')"
+        >
           <svg width="8" height="8" class="close-button-icon">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -539,7 +551,7 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the <a class="link">Privacy Policy</a>
+              <p>I accept the terms and conditions of the <a class="link">Privacy Policy</a></p>
             </label>
           </div>
 
