@@ -409,16 +409,7 @@ img {
   background-color: var(--primary-state-color);
 }
 
-.portfolio__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-
-.portfolio__list .portfolio__item {
-  width: calc((100% - 48px) / 3);
+.portfolio__item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -753,6 +744,10 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   .team__item:not(:last-child) {
     margin-bottom: 72px;
   }
+
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -802,6 +797,18 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
     gap: 24px;
     row-gap: 64px;
   }
+
+  .portfolio__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio__list .portfolio__item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1158px) {
@@ -849,5 +856,13 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
     margin-bottom: 8px;
     border: 1px solid var(--subtle-text-color);
     height: 112px;
+  }
+
+  .portfolio__list {
+    row-gap: 48px;
+  }
+
+  .portfolio__list .portfolio__item {
+    width: calc((100% - 48px) / 3);
   }
 }
