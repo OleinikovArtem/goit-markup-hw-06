@@ -446,27 +446,13 @@ img {
 }
 
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--dark-color);
   color: var(--light-color);
 }
 
-.footer .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-}
-
-.footer .col:nth-child(1) {
-  margin-right: 120px;
-}
-
-.footer .col:nth-child(2) {
-  margin-right: 80px;
-}
-
 .footer .social {
-  align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -487,6 +473,7 @@ img {
   font-weight: 500;
   color: var(--white-color);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer__social {
@@ -698,12 +685,6 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   fill: var(--white-color);
 }
 
-.subscribe-form {
-  display: flex;
-  gap: 24px;
-  align-items: flex-end;
-}
-
 .subscribe-form-label {
   font-weight: 500;
 }
@@ -711,9 +692,9 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
 .subscribe-form .form-controller-input {
   background: transparent;
   color: var(--white-color);
-  border-color: var(--white-color);
+  border-color: rgba(255, 255, 255, 0.3);
   padding-left: 16px;
-  width: 264px;
+  width: 100%;
 }
 
 .subscribe-form .form-controller-input::placeholder {
@@ -741,12 +722,23 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   }
 
   .goals__item:not(:last-child),
-  .team__item:not(:last-child) {
+  .team__item:not(:last-child),
+  .footer .col:not(:last-child) {
     margin-bottom: 72px;
   }
 
   .portfolio__item:not(:last-child) {
     margin-bottom: 48px;
+  }
+
+  .footer .logo {
+    display: block;
+    margin: 0 auto 16px;
+    width: fit-content;
+  }
+
+  .subscribe-form .form-controller-input {
+    margin: 0 auto 16px;
   }
 }
 
@@ -809,6 +801,32 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
   .portfolio__list .portfolio__item {
     width: calc((100% - 24px) / 2);
   }
+
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .footer__col-title {
+    text-align: left;
+  }
+
+  .footer .col:first-child {
+    margin-right: 24px;
+    margin-bottom: 72px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+  }
+
+  .subscribe-form .form-controller-input {
+    width: 264px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1158px) {
@@ -864,5 +882,17 @@ input[type='checkbox']:checked + .form-controller-label .checkbox {
 
   .portfolio__list .portfolio__item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .footer .col:nth-child(1) {
+    margin-right: 120px;
+  }
+
+  .footer .col:nth-child(2) {
+    margin-right: 80px;
+  }
+
+  .subscribe-form .form-controller-input {
+    color: var(--white-color);
   }
 }
